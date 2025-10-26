@@ -1,31 +1,18 @@
+import BackToTopButton from "@/components/core/BackToTopButton";
 import Bio from "@/components/core/Bio";
-import SendEmailFormDialog from "@/components/core/SendEmailFormDialog";
 import FAQs from "@/components/core/FAQs";
 import Footer from "@/components/core/Footer";
 import HeroSection from "@/components/core/HeroSection";
+import Members from "@/components/core/Members";
 import Navbar from "@/components/core/Navbar";
 import Packages from "@/components/core/Packages";
-import Products from "@/components/core/Products";
-import Services from "@/components/core/Services";
-import Testimonials from "@/components/core/Testimonials";
 import ReachOut from "@/components/core/ReachOut";
+import SendEmailFormDialog from "@/components/core/SendEmailFormDialog";
+import Services from "@/components/core/Services";
 import SiteLogo from "@/components/core/SiteLogo";
-import Members from "@/components/core/Members";
-import BackToTopButton from "@/components/core/BackToTopButton";
+import Testimonials from "@/components/core/Testimonials";
 
 export {
-  BackToTopButton,
-  Navbar,
-  SiteLogo,
-  HeroSection,
-  Bio,
-  Members,
-  Services,
-  Products,
-  Packages,
-  Testimonials,
-  FAQs,
-  SendEmailFormDialog,
-  ReachOut,
-  Footer,
+  BackToTopButton, Bio, FAQs, Footer, HeroSection, Members, Navbar, Packages, ReachOut, SendEmailFormDialog, Services, SiteLogo, Testimonials
 };
+

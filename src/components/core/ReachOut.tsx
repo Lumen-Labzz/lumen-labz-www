@@ -1,15 +1,20 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Mail, MessageCircle, MousePointer2 } from "lucide-react";
+import ContactMeFormDialog from "@/components/core/ContactMeDialog";
 
-const ecommerceTags = [
-  { label: "E-Commerce", x: "15%", y: "15%" },
-  { label: "Product Design", x: "50%", y: "45%" },
-  { label: "Shopify", x: "60%", y: "20%" },
-  { label: "Checkout UX", x: "55%", y: "75%" },
-  { label: "Store Analytics", x: "20%", y: "30%" },
-  { label: "Payment Systems", x: "25%", y: "60%" },
+const contactTags = [
+  { label: "Website Development", x: "20%", y: "20%" },
+  { label: "Mobile Apps", x: "70%", y: "25%" },
+  { label: "Business Solutions", x: "25%", y: "75%" },
+  { label: "Digital Strategy", x: "70%", y: "50%" },
+  { label: "Brand Websites", x: "40%", y: "40%" },
+  { label: "E-Commerce Stores", x: "35%", y: "55%" },
+  { label: "Custom Software", x: "55%", y: "10%" },
 ];
 
 const ReachOut = () => {
@@ -17,78 +22,103 @@ const ReachOut = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % ecommerceTags.length);
-    }, 3000);
+      setActiveIndex((prev) => (prev + 1) % contactTags.length);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden rounded-3xl bg-gradient-to-b from-gray-50 to-white px-4 sm:px-8 lg:px-20 py-16 sm:py-20 shadow-inner border border-gray-100 flex flex-col lg:flex-row items-center justify-between gap-10">
-      <div className="relative w-full lg:w-1/2 h-[280px] sm:h-[380px] md:h-[440px] flex items-center justify-center overflow-visible pointer-events-none">
-        <div className="relative w-[90%] h-[90%]">
-          {ecommerceTags.map((tag, i) => (
+    <section
+      id="reach-out"
+      className="relative overflow-hidden bg-primary/80 px-4 sm:px-8 lg:px-20 py-16 sm:py-20"
+    >
+      <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="hidden md:flex relative w-full lg:w-1/2 h-[300px] sm:h-[400px] md:h-[460px] items-center justify-center overflow-visible pointer-events-none">
+          <div className="relative w-[90%] h-[90%]">
+            {contactTags.map((tag, i) => {
+              const isActive = i === activeIndex;
+              return (
+                <motion.div
+                  key={i}
+                  className="absolute"
+                  style={{
+                    left: tag.x,
+                    top: tag.y,
+                    transform: "translate(-50%, -50%)",
+                  }}
+                  animate={{ scale: isActive ? 1.12 : 1 }}
+                  transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                >
+                  <Badge
+                    variant={isActive ? "default" : "secondary"}
+                    className="text-xs sm:text-sm font-medium py-2 px-4 sm:px-6 transition-all duration-300"
+                  >
+                    {tag.label}
+                  </Badge>
+                </motion.div>
+              );
+            })}
+
             <motion.div
-              key={i}
-              className="absolute"
-              style={{
-                left: tag.x,
-                top: tag.y,
-                transform: "translate(-50%, -50%)",
+              className="absolute z-20 flex flex-col items-start font-semibold text-xs sm:text-sm"
+              animate={{
+                left: contactTags[activeIndex].x,
+                top: contactTags[activeIndex].y,
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 18,
+              }}
+              style={{
+                translateX: "148%",
+                translateY: "148%",
+              }}
             >
-              <div className="px-3 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-gray-700 bg-white/80 border border-gray-200 rounded-full backdrop-blur-md shadow-sm whitespace-nowrap">
-                {tag.label}
-              </div>
+              <MousePointer2 className="size-5 sm:size-6 fill-primary text-primary" />
+              <motion.span
+                className="ml-5 -mt-4 backdrop-blur-sm px-2 py-0.5 rounded-full bg-primary-foreground border-primary border sm:text-xs"
+                transition={{ duration: 0.3 }}
+              >
+                Lumen Labbz
+              </motion.span>
             </motion.div>
-          ))}
-
-          <motion.div
-            className="absolute z-10 text-primary"
-            animate={{
-              left: ecommerceTags[activeIndex].x,
-              top: ecommerceTags[activeIndex].y,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 15,
-            }}
-            style={{
-              translateX: "-50%",
-              translateY: "-50%",
-            }}
-          >
-            <MousePointer2 className="size-4 sm:size-5 fill-primary text-primary" />
-          </motion.div>
+          </div>
         </div>
-      </div>
 
-      <div className="relative z-10 max-w-xl w-full text-center lg:text-left">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-          I'm ready to help build your next ecommerce success
-        </h2>
-        <p className="text-gray-500 mb-8 text-sm sm:text-base">
-          Let's create an experience your customers will love.
-        </p>
+        <div className="relative z-10 max-w-xl w-full text-center lg:text-left">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
+            We're ready to build your next product 🚀
+          </h2>
+          <p className="mb-8 text-sm sm:text-base">
+            Let's bring your vision to life. Reach out anytime!
+          </p>
 
-        <div className="flex justify-center lg:justify-start gap-3 flex-wrap">
-          <Button variant="outline" size="lg" asChild>
-            <a href="mailto:lumenlabzz@gmail.com" aria-label="Email me">
-              <Mail className="size-8" />
-            </a>
-          </Button>
+          <div className="flex justify-center lg:justify-start gap-3 flex-wrap">
+            <Button variant="secondary" asChild>
+              <a
+                href="mailto:danielkarume.work@gmail.com"
+                aria-label="Email me"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Mail className="size-6" />
+              </a>
+            </Button>
 
-          <Button variant="outline" size="lg" asChild>
-            <a
-              href="https://wa.me/0704150182"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp"
-            >
-              <MessageCircle className="size-8 text-green-500" />
-            </a>
-          </Button>
+            <Button variant="secondary" asChild>
+              <a
+                href="https://wa.me/254704150182"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+              >
+                <MessageCircle className="size-6" />
+              </a>
+            </Button>
+
+            <ContactMeFormDialog />
+          </div>
         </div>
       </div>
     </section>

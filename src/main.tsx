@@ -7,7 +7,6 @@ import {
   HeroSection,
   Navbar,
   Packages,
-  Products,
   ReachOut,
   Services,
   Members,
@@ -27,7 +26,6 @@ createRoot(document.getElementById("root")!).render(
     <Bio />
     <Members />
     <Services />
-    <Products />
     <Packages />
     <Testimonials />
     <FAQs />

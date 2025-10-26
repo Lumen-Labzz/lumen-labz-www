@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full py-4 px-4 sm:px-8 lg:px-20 xl:px-32 flex items-center justify-between relative">
+    <header className="w-full py-4 px-4 sm:px-8 lg:px-20 xl:px-32 flex items-center justify-between bg-primary">
       <div className="flex-shrink-0">
         <SiteLogo />
       </div>

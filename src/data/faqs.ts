@@ -3,32 +3,32 @@ import type { Faq } from "@/types";
 export const faqs: Faq[] = [
   {
     id: crypto.randomUUID(),
-    question: "What is WWW-Template?",
+    question: "What is Lumen Labzz?",
     answer:
-      "WWW-Template is a design-driven company that provides ready-to-use, customizable templates for creators, businesses, and developers. From web layouts to brand kits, we help you launch faster with professional results.",
+      "Lumen Labzz is a software development company that builds modern digital solutions — from websites and mobile apps to branding, hosting, and deployment. We help businesses grow through technology.",
   },
   {
     id: crypto.randomUUID(),
-    question: "Are your templates easy to customize?",
+    question: "Do I need technical experience to work with you?",
     answer:
-      "Absolutely. All of our templates are built with flexibility in mind — you can easily change colors, typography, and structure using your preferred tools like Figma, Tailwind CSS, or any compatible editor.",
+      "No! We handle everything for you — design, development, hosting, updates, and maintenance. You focus on your business while we manage your digital operations.",
   },
   {
     id: crypto.randomUUID(),
-    question: "Do I need design or coding experience to use your templates?",
+    question: "What kind of digital products do you build?",
     answer:
-      "Not at all! Each template includes simple documentation and intuitive design layers, so even beginners can create beautiful, functional projects without technical expertise.",
+      "We specialize in web applications, mobile apps, desktop software, eCommerce platforms, custom APIs, and brand identity systems — tailored to each client’s goals.",
   },
   {
     id: crypto.randomUUID(),
-    question: "Can I use WWW-Template products for commercial projects?",
+    question: "Can you manage my domain and hosting?",
     answer:
-      "Yes! Our standard license covers both personal and commercial use. You can use our templates to build websites, portfolios, client projects, and more — just don’t resell the templates themselves.",
+      "Yes, we provide full setup and management including domain registration, secure hosting, SSL certificates, backups, and monitoring — so your business stays online 24/7.",
   },
   {
     id: crypto.randomUUID(),
-    question: "Do you offer support or custom design services?",
+    question: "Do you offer ongoing support and updates?",
     answer:
-      "We do! Our team offers support for all premium templates and can provide custom branding or layout adjustments upon request. Reach out through our contact form to learn more.",
+      "Absolutely. Our subscription plans include continuous updates, security monitoring, content changes, and technical support to keep your platform fresh and secure.",
   },
 ];

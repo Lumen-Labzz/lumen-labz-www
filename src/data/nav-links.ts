@@ -1,11 +1,10 @@
 import type { NavLink } from "@/types";
 import {
-  Boxes,
   Briefcase,
   CircleHelp,
   MessageSquare,
   Package,
-  UsersRound
+  UsersRound,
 } from "lucide-react";
 
 export const navLinks: NavLink[] = [
@@ -18,11 +17,6 @@ export const navLinks: NavLink[] = [
     href: "services",
     label: "Services",
     Icon: Briefcase,
-  },
-  {
-    href: "products",
-    label: "Products",
-    Icon: Boxes,
   },
   {
     href: "packages",

@@ -28,12 +28,12 @@ const Footer = () => {
         <section>
           <div className="flex items-center gap-2 mb-3">
             <SiteLogo />
-            <h2 className="text-xl font-bold">WWW-Template</h2>
+            <h2 className="text-xl font-bold">Lumen Labzz</h2>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            WWW-Template provides high-quality templates and creative assets
-            designed to help businesses, developers, and creators bring their
-            visions to life with ease and style.
+            Lumen Labzz builds powerful digital products — from websites and
+            mobile apps to hosting, branding, and deployment. We turn ideas into
+            high-performance software that scales with your business.
           </p>
         </section>
 
@@ -72,11 +72,10 @@ const Footer = () => {
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold mb-4">
-            Subscribe to our Newsletter
-          </h2>
+          <h2 className="text-lg font-semibold mb-4">Subscribe</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Stay up to date with new templates, deals, and design inspiration.
+            Get product updates, tech insights, and exclusive offers — straight
+            to your inbox.
           </p>
           <form
             onSubmit={handleSubscribe}
@@ -100,7 +99,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 border-t border-border pt-4 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} WWW-Template. All rights reserved.
+        © {new Date().getFullYear()} Lumen Labzz. All rights reserved.
       </div>
     </footer>
   );

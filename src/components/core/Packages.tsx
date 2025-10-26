@@ -1,14 +1,12 @@
-import { packages } from "@/data";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardContent,
   CardDescription,
-  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { packages } from "@/data";
 import { cn } from "@/lib/utils";
 
 const Packages = () => {
@@ -56,7 +54,7 @@ const Packages = () => {
 
               <CardContent className="text-center space-y-4">
                 <div className="text-4xl font-bold">
-                  ${pkg.price}
+                  {pkg.price} KES
                   <span className="text-sm font-normal text-muted-foreground">
                     /{pkg.billingCycle}
                   </span>
@@ -77,15 +75,6 @@ const Packages = () => {
                   ))}
                 </div>
               </CardContent>
-
-              <CardFooter className="flex justify-center">
-                <Button
-                  variant={pkg.isPopular ? "secondary" : "default"}
-                  className="w-full"
-                >
-                  Choose Plan
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>

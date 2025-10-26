@@ -1,1 +1,1 @@
-# Lumen Labbz landing page!
+# Lumen Labzz landing page!

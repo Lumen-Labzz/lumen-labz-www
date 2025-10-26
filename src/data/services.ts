@@ -1,84 +1,84 @@
 import type { Service } from "@/types";
 import {
-  Palette,
   Code,
-  Megaphone,
-  PenTool,
-  ShoppingBag,
-  LineChart,
+  Smartphone,
+  Monitor,
+  Globe,
+  Server,
+  Palette,
 } from "lucide-react";
 
 export const services: Service[] = [
   {
     id: crypto.randomUUID(),
-    title: "Brand Identity Design",
+    title: "Logo & Brand Identity",
     description:
-      "Crafting cohesive and memorable brand identities that help businesses stand out with purpose and personality.",
+      "Designing bold, memorable identities that give your product a strong and professional presence in the market.",
     icon: Palette,
     features: [
-      "Logo & visual system design",
-      "Color & typography guidelines",
-      "Brand assets and templates",
-    ],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Web Design",
-    description:
-      "Designing responsive, user-centered websites that communicate your brand message beautifully across all devices.",
-    icon: PenTool,
-    features: [
-      "Modern UI/UX design",
-      "Wireframing & prototyping",
-      "Responsive layout systems",
+      "Custom logo creation",
+      "Brand guidelines development",
+      "Iconography & digital assets",
     ],
   },
   {
     id: crypto.randomUUID(),
     title: "Web Development",
     description:
-      "Building high-performance, scalable websites powered by modern frameworks and best development practices.",
+      "Building fast, secure, and scalable websites using modern technologies tailored to your business goals.",
     icon: Code,
     features: [
-      "React + Vite stack",
-      "Fast, SEO-optimized builds",
-      "Modular and reusable components",
+      "Full-stack web applications",
+      "SEO-friendly infrastructure",
+      "CMS and dashboard integration",
     ],
   },
   {
     id: crypto.randomUUID(),
-    title: "E-Commerce Solutions",
+    title: "Mobile App Development",
     description:
-      "Creating seamless online shopping experiences that convert visitors into loyal customers.",
-    icon: ShoppingBag,
+      "Creating intuitive mobile apps that deliver seamless experiences on iOS and Android platforms.",
+    icon: Smartphone,
     features: [
-      "Shop setup & integrations",
-      "Payment gateway support",
-      "Custom product templates",
+      "Cross-platform development",
+      "Performance optimization",
+      "UI/UX for mobile devices",
     ],
   },
   {
     id: crypto.randomUUID(),
-    title: "Digital Marketing",
+    title: "Desktop Application Development",
     description:
-      "Helping your brand grow through targeted online marketing strategies and content creation that drives results.",
-    icon: Megaphone,
+      "Developing powerful desktop software solutions built for productivity, stability, and user-friendly workflows.",
+    icon: Monitor,
     features: [
-      "Social media campaigns",
-      "SEO & paid advertising",
-      "Content and brand storytelling",
+      "Windows, macOS & Linux support",
+      "High-performance architecture",
+      "Custom tooling & automation apps",
     ],
   },
   {
     id: crypto.randomUUID(),
-    title: "Analytics & Growth Strategy",
+    title: "Domain & Hosting Services",
     description:
-      "Turning data into actionable insights to optimize performance and guide your brand’s digital growth.",
-    icon: LineChart,
+      "Everything you need to launch — domain management, website hosting, and cloud scaling handled for you.",
+    icon: Globe,
     features: [
-      "User behavior tracking",
-      "Performance dashboards",
-      "Conversion optimization",
+      "Domain registration & DNS setup",
+      "High-availability hosting",
+      "SSL security & uptime monitoring",
+    ],
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Deployment & DevOps",
+    description:
+      "Ensuring your product is always online — secure deployments, version control, automation, and monitoring.",
+    icon: Server,
+    features: [
+      "CI/CD pipelines",
+      "Cloud infrastructure setup",
+      "Scalability & performance tuning",
     ],
   },
 ];
